@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mwm-qE-2iY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iSG-N8-5Yy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mwm-qE-2iY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oOV-6a-ML8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0ep-Yk-DYi" kind="relationship" relationship="rootViewController" id="eb4-5n-PAT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ce2-JK-l9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="EWX-wo-3wB">
+            <objects>
+                <viewController id="0ep-Yk-DYi" customClass="MainViewController" customModule="Pandemic2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t3a-8k-Rfp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cs5-Sj-i93">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ib0-O0-n4e" firstAttribute="trailing" secondItem="cs5-Sj-i93" secondAttribute="trailing" id="5uL-45-BhA"/>
+                            <constraint firstItem="cs5-Sj-i93" firstAttribute="top" secondItem="Ib0-O0-n4e" secondAttribute="top" id="Obd-tu-rWB"/>
+                            <constraint firstItem="Ib0-O0-n4e" firstAttribute="bottom" secondItem="cs5-Sj-i93" secondAttribute="bottom" id="Qgp-jS-5Jo"/>
+                            <constraint firstItem="cs5-Sj-i93" firstAttribute="leading" secondItem="Ib0-O0-n4e" secondAttribute="leading" id="faI-wi-gn7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ib0-O0-n4e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pYx-Fc-a4D"/>
+                    <connections>
+                        <outlet property="countriesListView" destination="cs5-Sj-i93" id="uxy-EY-WU4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhD-VV-vy3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997" y="-173"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="iDy-6G-Jhk">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="iAq-59-v6w" customClass="DetailViewController" customModule="Pandemic2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v3B-8c-nAi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nm2-Kd-2uh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nm2-Kd-2uh" secondAttribute="trailing" id="1nW-Sv-OzP"/>
+                            <constraint firstItem="nm2-Kd-2uh" firstAttribute="leading" secondItem="v3B-8c-nAi" secondAttribute="leading" id="5jy-dL-ibH"/>
+                            <constraint firstAttribute="bottom" secondItem="nm2-Kd-2uh" secondAttribute="bottom" constant="34" id="KVN-7I-Wu0"/>
+                            <constraint firstItem="nm2-Kd-2uh" firstAttribute="top" secondItem="ocF-D1-rlV" secondAttribute="top" id="iFf-zO-qaY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ocF-D1-rlV"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="nm2-Kd-2uh" id="dVN-BV-cpI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozI-xs-FgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529" y="-179"/>
+        </scene>
+    </scenes>
+</document>
